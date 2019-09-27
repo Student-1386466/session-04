@@ -1,34 +1,34 @@
 function validate(){
-  if(document.myApplication.Name.value =="")
+  if( document.myForm.Name.value == "")
   {
     alert("Please provide your name!!");
-    document.myApplication.name.focus();
+    document.myForm.Name.focus();
     return false;
   }
 
-  if(document.myApplication.Email.value =="")
+  if(document.myForm.Email.value =="")
   {
     alert("Please provide your Email!!");
-    document.myApplication.Email.focus();
+    document.myForm.Email.focus();
     return false;
   }
-  var emailId = document.myApplication.Email.value;
+  var emailId = document.myForm.Email.value;
   atpos =emailId.indexof("@");
   dotpos =emailId.lastIndexof(".");
 
-  if(atpos <1 || (dotpos - atpos <2)){
+  if((atpos < 1 )|| (dotpos <2)) {
     alert("Please enter email in correct format!!")
-    document.myApplication.Email.focus();
+    document.myForm.Email.focus();
     return false;
   }
 
- if(document.myApplication.postcode.value ==""){
+ if(document.myForm.postcode.value ==""){
    alert("Please provide postcode in correct format.. e.g A4 0BC");
-   document.myApplication.postcode.focus();
+   document.myForm.postcode.focus();
    return false;
  }
 
- if(document.myApplication.months.value=="-1"){
+ if(document.myForm.months.value=="-1"){
    alert("Please select How many month(s) you want to stay!!");
    return false;
  }
